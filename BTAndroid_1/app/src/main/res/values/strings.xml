@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">BTAndroid_1</string>
-    <string name="new_game">New Game</string>
-    <string name="Continue_game">Continue Game</string>
-    <string name="Continue_Game">Continue Game</string>
-    <string name="Help_Game">Help Game</string>
-    <string name="Quick_Game">Quick Game</string>
-</resources>
