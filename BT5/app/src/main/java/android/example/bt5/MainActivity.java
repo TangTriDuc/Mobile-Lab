@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_Google, btn_Phone, btn_View, btn_Send, btn_Picture, btn_Music, btn_Map;
+    Button btn_Google, btn_Phone, btn_View, btn_Send, btn_Picture, btn_Music, btn_Map, btn_SendMail, btn_Wifi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +100,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Process button Send Mail
+        btn_SendMail = findViewById(R.id.btn_SendMail);
+
+        btn_SendMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent si = new Intent(Intent.ACTION_SEND);
+                si.setType("message/rfc822");
+                si.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@TDuc.com"});
+                si.putExtra(Intent.EXTRA_SUBJECT, "Welcome to TD");
+                si.putExtra(Intent.EXTRA_TEXT, "Hi Guest, Welcome to TD Mail Suppose");
+                startActivity(Intent.createChooser(si,"Choose Mail App"));
+            }
+        });
+
+        //Process button Wifi
+        btn_Wifi = findViewById(R.id.btn_Wifi);
+
+        btn_Wifi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
+                startActivity(intent);
+            }
+        });
     }
 
 }

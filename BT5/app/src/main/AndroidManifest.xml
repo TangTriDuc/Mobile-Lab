@@ -29,6 +29,11 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+            <!--Process for Send Mail-->
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="message/rfc822"/>
             </intent-filter>
         </activity>
     </application>
