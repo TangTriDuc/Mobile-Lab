@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit1"
+        android:text="name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="99dp"/>
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-55dp"
+        android:layout_below="@id/edit1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Read"
+        android:textSize="25dp"/>
+
+
+    <EditText
+        android:id="@+id/edit2"
+        android:text="age"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="99dp"
+        android:layout_below="@id/read"/>
+
+    <Button
+        android:id="@+id/write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-55dp"
+        android:layout_below="@id/edit2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Write"
+        android:textSize="25dp"/>
+
+
+
+</RelativeLayout>
